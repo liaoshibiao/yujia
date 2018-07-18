@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.8.0.js" ></script>
+		<script src="js/jquery.SuperSlide.2.1.1.source.js"></script>
+		<style>
+			*{margin:0px;padding:0px;}
+			li{list-style:none;}
+			a{text-decoration:none;}
+			img{border:none;}
+			body{
+				background: #fff;
+			}
+			.bannerbox {
+				width:100%;
+				overflow:hidden;
+				position:relative;
+			}
+			.bannerbox .hd {
+/*				height:30px;*/
+				position:absolute;
+				width: 100%;
+				bottom: 0px;
+				z-index:1;
+				bottom: 5px;
+				left: 5%;
+				/*text-align: center;*/
+			}
+			.bannerbox .hd ul {
+				zoom:1;
+				width: 24%;
+			    margin: 0 auto;
+			}
+			.bannerbox .hd ul li {
+				float:left;
+				height:10px;
+				width:10px;
+				background: #fff;
+				text-align:center;
+				cursor:pointer;
+				color: #fff;
+				overflow: hidden;
+				margin: 0 5px;
+				border-radius: 10px;
+				opacity: .3;
+			}
+			.bannerbox .hd ul li.on {
+				height:10px;
+				width: 10px;
+				background: turquoise;
+				opacity: 1;
+			}
+			.bd1 {
+				position:relative;
+				z-index:0;
+			}
+			.bd1 li {
+				zoom:1;
+				vertical-align:middle;
+			}
+			.bd1 img {
+				width:100%;
+				display:block;
+				height: 140px;
+			}
+			.dj p{
+				width:40px;
+				height:40px;
+				background:rgba(0,0,0,.5);
+				line-height: 40px;
+				text-align: center;
+				border-radius: 50%;
+				font-size: 2rem;
+				/*position: absolute;
+				right:0 ;top: 0px;*/
+				z-index: 999;
+			}
+			.dj p:nth-child(1){
+				position: absolute;
+				right:0 ;top: 50px;
+				margin-right: 20px;
+			}
+			.dj p:nth-child(2){
+				position: absolute;
+				left:0 ;top: 50px;
+				margin-left: 20px;
+			}
+			.tempWrap{
+				width: 100% !important;
+			}
+            .liebiao .demo{
+			    display:-webkit-box;
+			    display:-webkit-flex;
+			    display:-ms-flexbox;
+			    display:flex;
+			    -webkit-box-pack:justify;
+			    -webkit-justify-content:space-between;
+			    -ms-flex-pack:justify;
+			    justify-content:space-between;
+			    padding-top: 5px;
+			}
+			.liebiao .demo a{
+			     width:70px;
+			     height: 70px;
+			     display:block;
+			    /* height:70px;*/
+			     line-height:44px;
+			     text-align:center;
+			     color:#666;
+			     font-size:16px;
+			     margin-bottom:5px;
+			     background-color:#fefefe;
+			     /*background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fefefe),color-stop(1,#eee));*/
+			     color:#666;
+			     text-decoration:none;
+			}
+			.liebiao .demo a img{
+				width: 100%;
+				height: 100%;
+			}
+			.tu .demo{
+			    display:-webkit-box;
+			    display:-webkit-flex;
+			    display:-ms-flexbox;
+			    display:flex;
+			    -webkit-box-pack:justify;
+			    -webkit-justify-content:space-between;
+			    -ms-flex-pack:justify;
+			    justify-content:space-between;
+			    margin-top: 12px;
+			}
+			.tu .demo a{
+			     width:60px;
+			     display:block;
+			     height:60px;
+			     line-height:44px;
+			     text-align:center;
+			     color:#666;
+			     font-size:16px;
+			     margin-bottom:5px;
+			     background-color:#fefefe;
+			     /*background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fefefe),color-stop(1,#eee));*/
+			     color:#666;
+			     text-decoration:none;
+			     border-radius:50%;
+/*			     background: red;*/
+			}
+			.tu .demo a img{
+				width: 100%;
+				height: 100%;
+				border-radius:50%;
+			}
+			.zhao ul li{
+				width:110px;
+				height:60px;
+				position: absolute;
+			}
+			.zhao ul li img{
+				width:100%;
+				height: 100%;
+			}
+            /*.zhao ul li:hover{
+			    transform:scale(1.3);
+			    transition:all 3s;
+			    box-shadow: 1px 1px 1px #000;
+			    z-index:20;
+		    }*/
+		    .zhao ul li:hover{
+		    	transform:scale(1.3);
+		    	transition:all 3s;
+			    box-shadow: 1px 1px 1px #000;
+		    	z-index:20;
+		    }
+		    .zhao ul li:nth-of-type(1){z-index:6;left:29%; top:22px;width: 137px;height: 80px;}
+			.zhao ul li:nth-of-type(2){z-index:2;left:14%;top:42px;width: 130px;height: 60px;} 
+			.zhao ul li:nth-of-type(3){z-index:3;left:48%;top:42px;width: 130px;height: 60px;}
+			.zhao ul li:nth-of-type(4){z-index:4;left:48%;top:102px;}   
+			.zhao ul li:nth-of-type(5){z-index:5;left:19%;top:102px;}
+		</style>
+	</head>
+	<body>
+		<div id="bannerbox" class="bannerbox">
+			<div class="hd">
+				<ul>
+					<li class="on"></li>
+					<li class=""></li>
+					<li class=""></li>
+				</ul>
+			</div>
+			<div class="dj"style="position: relative;">
+				<p class="prev">></p>
+				<p class="next"><</p>
+			</div>
+			<div class="bd1">
+				<ul>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/banner.png">
+						</a>
+					</li>
+					<li>
+						<a href="/index/article/detail/id/46" target="_blank">
+							<img src="img/banner2.png">
+						</a>
+					</li>
+					<li>
+						<a href="/index/article/detail/id/46" target="_blank">
+							<img src="img/banner3.png">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="liebiao"style="width: 70%;margin: 0 auto;border-bottom: 2px solid #d0d6d6;padding-bottom:5px ;margin-bottom: 10px;">
+			<div style="width: 100%;height: 50px;">
+				<p style="width:36%;height: 100%;">
+				 <img style="width: 100%;height: 100%;"src="img/logo_1.png">
+				<p>
+			</div>
+		</div>	
+		<div style="width: 100%;height: 100%;background: #ecede7;">
+			<div class="liebiao"style="width: 70%;margin: 0 auto;">
+				<div class="demo">
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				</div>
+				<div class="demo">
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+				</div>
+			</div>
+		</div>
+		<div style="width: 100%;height: 100px;margin: 12px 0;">
+			<img style="width: 100%;height: 100%;"src="img/banner.png">
+		</div>
+		<div class="tu"style="width: 70%;margin: 0 auto;">
+			<div style="width: 100%;height: 50px;">
+				<p style="width:36%;height: 100%;">
+				 <img style="width: 100%;height: 100%;"src="img/logo_1.png">
+				<p>
+			</div>
+			<div class="demo"style="margin-top: 5px;border-top: 2px solid #eee; padding:10px 0px;">
+			    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+			    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+			    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+			    <a class="link" href="#none"><img src="img/logo_1.png"></a>
+			</div>
+		</div>
+		<div class="zhao" style="width: 100%;height: 180px;background:#d0d6d6;position: relative;">
+			<ul>
+				<li class="one"><img src="img/banner.png"></li>
+				<li><img src="img/banner.png"></li>
+				<li><img src="img/banner.png"></li>
+				<li><img src="img/banner.png"></li>
+				<li><img src="img/banner.png"></li>
+			</ul>
+		</div>
+	</body>
+</html>
+	<script id="jsID" type="text/javascript">
+			jQuery(".bannerbox").slide({mainCell:".bd1 ul",effect:"leftLoop",autoPlay:true,delayTime:500,pnLoop:"dj p"});
+//			jQuery(".dj div").slide({pnLoop:true});
+    $(".zhao ul li").click(function(){
+    	$(this).css({zIndex:"2"})
+    	$(this).siblings("li").css({zIndex:"0"})
+    	$(".one").css({zIndex:"1"})
+//  	if($(".one").zIndex==0){
+//  		$(".one").css({zIndex:"1"})
+//  	}
+    })
+	</script>
